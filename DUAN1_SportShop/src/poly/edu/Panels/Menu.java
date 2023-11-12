@@ -66,7 +66,7 @@ public class Menu extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void init() {
-        setLayout(new  MigLayout("Wrap,fillx,insets 0","0[fill]","7[]0[]push[60]0"));
+        setLayout(new  MigLayout("Wrap,fillx,insets 0","0[fill]","7[]0[]push[200]0"));
         panelMenu =new JPanel();
         header = new Header();
         bottom = new bottom();

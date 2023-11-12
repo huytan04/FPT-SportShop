@@ -14,6 +14,7 @@ import poly.edu.Model.modelMenu;
 import javax.swing.Timer;
 import org.jdesktop.animation.timing.TimingTarget;
 import org.jdesktop.animation.timing.TimingTargetAdapter;
+import poly.edu.Panels.BanHangForm;
 import poly.edu.Panels.DonHangForm;
 import poly.edu.Panels.KhachHangForm;
 
@@ -65,7 +66,7 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void selected(int index) {
                 if(index ==0){
-                    showForm(new TaiKhoanForm());
+                    showForm(new BanHangForm());
                 }else if(index==1){
                     showForm(new TaiKhoanForm());
                 }
@@ -150,11 +151,11 @@ public class Main extends javax.swing.JFrame {
         body.setLayout(bodyLayout);
         bodyLayout.setHorizontalGroup(
             bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1042, Short.MAX_VALUE)
+            .addGap(0, 1442, Short.MAX_VALUE)
         );
         bodyLayout.setVerticalGroup(
             bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 531, Short.MAX_VALUE)
+            .addGap(0, 603, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

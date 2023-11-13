@@ -1,6 +1,5 @@
 package poly.edu.View;
 
-
 import org.jdesktop.animation.timing.Animator;
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -25,7 +24,6 @@ import poly.edu.Panels.TaiKhoanForm;
 import poly.edu.Panels.ThongKeForm;
 import poly.edu.Panels.VoucherForm;
 import poly.edu.event.EventMenuSelected;
-import raven.crazypanel.MigLayoutConstraints;
 
 public class Main extends javax.swing.JFrame {
 
@@ -35,7 +33,7 @@ public class Main extends javax.swing.JFrame {
     private Animator animator;
     private boolean menuShow;
     private Timer timer;
-    
+
     public Main() {
         initComponents();
         init();
@@ -51,7 +49,7 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openDangXuat();
-                }
+            }
         });
         menu.addEventMenu(new ActionListener() {
             @Override
@@ -65,25 +63,24 @@ public class Main extends javax.swing.JFrame {
         menu.setEvent(new EventMenuSelected() {
             @Override
             public void selected(int index) {
-                if(index ==0){
+                if (index == 0) {
                     showForm(new BanHangForm());
-                }else if(index==1){
+                } else if (index == 1) {
                     showForm(new TaiKhoanForm());
-                }
-                else if(index ==2){
+                } else if (index == 2) {
                     showForm(new SanPhamForm());
-                }else if(index==3){
+                } else if (index == 3) {
                     showForm(new NhanVienForm());
-                }else if(index==4){
+                } else if (index == 4) {
                     showForm(new KhachHangForm());
-                }else if(index==5){
+                } else if (index == 5) {
                     showForm(new ThongKeForm());
-                }else if(index==6){
+                } else if (index == 6) {
                     showForm(new DonHangForm());
-                }else if(index==7){
+                } else if (index == 7) {
                     showForm(new VoucherForm());
                 }
-                }
+            }
         });
         menu.addMenu(new modelMenu("Bán hàng", new ImageIcon(getClass().getResource("/icon/banhang.png"))));
         menu.addMenu(new modelMenu("Tài Khoản", new ImageIcon(getClass().getResource("/icon/MaleUser.png"))));
@@ -93,29 +90,29 @@ public class Main extends javax.swing.JFrame {
         menu.addMenu(new modelMenu("Thống Kê", new ImageIcon(getClass().getResource("/icon/thongke.png"))));
         menu.addMenu(new modelMenu("Đơn Hàng", new ImageIcon(getClass().getResource("/icon/Order.png"))));
         menu.addMenu(new modelMenu("Voucher", new ImageIcon(getClass().getResource("/icon/Voucher.png"))));
-        
+
         body.add(menu, "w 50!");
         body.add(main, "w 100%");
-        TimingTarget target = new TimingTargetAdapter(){
+        TimingTarget target = new TimingTargetAdapter() {
             @Override
             public void timingEvent(float fraction) {
                 double width;
                 if (menuShow) {
                     width = 50 + (150 * (1f - fraction));
-                    menu.setAlpha( 1f - fraction);
+                    menu.setAlpha(1f - fraction);
                 } else {
                     width = 50 + (150 * fraction);
                     menu.setAlpha(fraction);
                 }
                 layout.setComponentConstraints(menu, "w " + width + "!");
                 body.revalidate();
-            }   
+            }
 
             @Override
             public void end() {
-                menuShow =!menuShow;
+                menuShow = !menuShow;
             }
-            
+
         };
 
         animator = new Animator(400, target);
@@ -124,19 +121,21 @@ public class Main extends javax.swing.JFrame {
         animator.setDeceleration(0.5f);
 //        showForm(new TaiKhoanForm());
 
-
     }
-    private void showForm(Component com){
+
+    private void showForm(Component com) {
         main.removeAll();
         main.add(com);
         main.repaint();
         main.revalidate();
     }
-    void openDangXuat(){
+
+    void openDangXuat() {
 //        Auth.clear();
         new Login(this, true).setVisible(true);
         this.dispose();
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

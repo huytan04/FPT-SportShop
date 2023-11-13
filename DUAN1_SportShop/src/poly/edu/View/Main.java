@@ -131,11 +131,23 @@ public class Main extends javax.swing.JFrame {
         main.repaint();
         main.revalidate();
     }
-    void openDangXuat(){
-//        Auth.clear();
-        new Login(this, true).setVisible(true);
-        this.dispose();
-    }
+   void openDangXuat() {
+    // Auth.clear(); // Assuming this is not relevant for the current functionality
+    Login loginDialog = new Login(this, true);
+    
+    // Set a window listener to perform actions when the Login window is closed
+    loginDialog.addWindowListener(new java.awt.event.WindowAdapter() {
+        @Override
+        public void windowClosed(java.awt.event.WindowEvent windowEvent) {
+            // This code will be executed when the Login window is closed
+            // You can add any additional actions needed here
+            // For example, you might want to show the main window or perform other tasks
+            setVisible(true); // Show the main window
+        }
+    });
+
+    loginDialog.setVisible(true);
+}
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -150,7 +162,7 @@ public class Main extends javax.swing.JFrame {
         body.setLayout(bodyLayout);
         bodyLayout.setHorizontalGroup(
             bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1042, Short.MAX_VALUE)
+            .addGap(0, 1208, Short.MAX_VALUE)
         );
         bodyLayout.setVerticalGroup(
             bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

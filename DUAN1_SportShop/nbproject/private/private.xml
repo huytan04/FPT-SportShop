@@ -3,14 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Java3/BaiTap/DUAN1_SportShop/src/poly/edu/Panels/SanPhamForm.java</file>
-            <file>file:/D:/Java3/BaiTap/DUAN1_SportShop/src/poly/edu/View/Main.java</file>
-            <file>file:/D:/Java3/BaiTap/DUAN1_SportShop/src/poly/edu/View/Login.java</file>
-            <file>file:/D:/Java3/BaiTap/DUAN1_SportShop/src/poly/edu/Panels/DonHangForm.java</file>
-            <file>file:/D:/Java3/BaiTap/DUAN1_SportShop/src/poly/edu/Panels/NhanVienForm.java</file>
-            <file>file:/D:/Java3/BaiTap/DUAN1_SportShop/src/poly/edu/Panels/TaiKhoanForm.java</file>
-            <file>file:/D:/Java3/BaiTap/DUAN1_SportShop/src/poly/edu/View/CuaSoChinh.java</file>
-            <file>file:/D:/Java3/BaiTap/DUAN1_SportShop/src/poly/edu/Panels/ThongKeForm.java</file>
+            <file>file:/D:/DuAn1/DUAN1_SportShop/src/poly/edu/uitility/DBcontext.java</file>
+            <file>file:/D:/DuAn1/DUAN1_SportShop/src/poly/edu/View/Main.java</file>
+            <file>file:/D:/DuAn1/DUAN1_SportShop/src/poly/edu/Panels/DonHangForm.java</file>
+            <file>file:/D:/DuAn1/DUAN1_SportShop/src/poly/edu/service/HoaDonService.java</file>
         </group>
     </open-files>
 </project-private>

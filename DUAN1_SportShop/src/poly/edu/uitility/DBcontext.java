@@ -19,7 +19,7 @@ public class DBcontext {
     public static String USER = "sa";
     public static String PASS = "luc123";
 
-    public static String URL = "jdbc:sqlserver://localhost:1433;databaseName=DUANMAU";
+    public static String URL = "jdbc:sqlserver://localhost:1433;databaseName=Sport_Shop";
     static{
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

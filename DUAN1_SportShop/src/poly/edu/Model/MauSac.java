@@ -16,15 +16,15 @@ public class MauSac {
     String tenMau;
     String trangThai;
     Date createAt;
-    int createBy;
+    String createBy;
     Date updateAt;
-    int updateBy;
+    String updateBy;
     boolean deleted;
 
     public MauSac() {
     }
 
-    public MauSac(int id, String maMau, String tenMau, String trangThai, Date createAt, int createBy, Date updateAt, int updateBy, boolean deleted) {
+    public MauSac(int id, String maMau, String tenMau, String trangThai, Date createAt, String createBy, Date updateAt, String updateBy, boolean deleted) {
         this.id = id;
         this.maMau = maMau;
         this.tenMau = tenMau;
@@ -76,11 +76,11 @@ public class MauSac {
         this.createAt = createAt;
     }
 
-    public int getCreateBy() {
+    public String getCreateBy() {
         return createBy;
     }
 
-    public void setCreateBy(int createBy) {
+    public void setCreateBy(String createBy) {
         this.createBy = createBy;
     }
 
@@ -92,11 +92,11 @@ public class MauSac {
         this.updateAt = updateAt;
     }
 
-    public int getUpdateBy() {
+    public String getUpdateBy() {
         return updateBy;
     }
 
-    public void setUpdateBy(int updateBy) {
+    public void setUpdateBy(String updateBy) {
         this.updateBy = updateBy;
     }
 
@@ -110,7 +110,11 @@ public class MauSac {
 
     @Override
     public String toString() {
-        return "MauSac{" + "id=" + id + ", maMau=" + maMau + ", tenMau=" + tenMau + ", trangThai=" + trangThai + ", createAt=" + createAt + ", createBy=" + createBy + ", updateAt=" + updateAt + ", updateBy=" + updateBy + ", deleted=" + deleted + '}';
+        return tenMau;
+    }
+
+    public Object[] toDataRow(int index){
+        return new Object[]{index,id,tenMau};
     }
     
 }

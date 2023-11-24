@@ -2,6 +2,7 @@ package poly.edu.View;
 
 import org.jdesktop.animation.timing.Animator;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,6 +38,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         init();
+        body.setBackground(Color.white);
     }
 
     private void init() {
@@ -67,6 +69,7 @@ public class Main extends javax.swing.JFrame {
                     showForm(new BanHangForm());
                 } else if (index == 1) {
                     showForm(new TaiKhoanForm());
+                    
                 } else if (index == 2) {
                     showForm(new SanPhamForm());
                 } else if (index == 3) {
@@ -142,6 +145,8 @@ public class Main extends javax.swing.JFrame {
 
         body = new javax.swing.JPanel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setUndecorated(true);
 
         body.setBackground(new java.awt.Color(245, 245, 245));

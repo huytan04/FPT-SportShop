@@ -11,42 +11,63 @@ import java.util.Date;
  * @author Admin
  */
 public class SanPhamChiTiet {
-    int id;
-    int idSanPham;
-    int idMauSac;
-    int idSize;
-    int idHang;
-    int idChatLieu;
-    int idDeGiay;
+    int id;  
+    SanPham sp;
+    MauSac mauSac;
+    Size size;
+    HangGiay hang;
+    ChatLieu chatLieu;
+    DeGiay deGiay;
+    String maCTSP;
+    int gia;
     String moTa;
     int SoLuongTon;
     String trangThai;
     Date createAt;
-    int createBy;
+    String createBy;
     Date updateAt;
-    int updateBy;
+    String updateBy;
     boolean deleted;
 
     public SanPhamChiTiet() {
     }
 
-    public SanPhamChiTiet(int id, int idSanPham, int idMauSac, int idSize, int idHang, int idChatLieu, int idDeGiay, String moTa, int SoLuongTon, String trangThai, Date createAt, int createBy, Date updateAt, int updateBy, boolean deleted) {
-        this.id = id;
-        this.idSanPham = idSanPham;
-        this.idMauSac = idMauSac;
-        this.idSize = idSize;
-        this.idHang = idHang;
-        this.idChatLieu = idChatLieu;
-        this.idDeGiay = idDeGiay;
+    public SanPhamChiTiet(SanPham sp, MauSac mauSac, HangGiay hang, DeGiay deGiay, String maCTSP, int gia, String moTa, int SoLuongTon, String trangThai, Date createAt, Date updateAt, boolean deleted) {
+        this.sp = sp;
+        this.mauSac = mauSac;
+        this.hang = hang;
+        this.deGiay = deGiay;
+        this.maCTSP = maCTSP;
+        this.gia = gia;
         this.moTa = moTa;
         this.SoLuongTon = SoLuongTon;
         this.trangThai = trangThai;
         this.createAt = createAt;
-        this.createBy = createBy;
         this.updateAt = updateAt;
-        this.updateBy = updateBy;
         this.deleted = deleted;
     }
+
+    public SanPhamChiTiet(int id, SanPham sp, MauSac mauSac, Size size, HangGiay hang, ChatLieu chatLieu, DeGiay deGiay, String maCTSP, int gia, String moTa, int SoLuongTon, String trangThai, Date createAt, Date updateAt, boolean deleted) {
+        this.id = id;
+        this.sp = sp;
+        this.mauSac = mauSac;
+        this.size = size;
+        this.hang = hang;
+        this.chatLieu = chatLieu;
+        this.deGiay = deGiay;
+        this.maCTSP = maCTSP;
+        this.gia = gia;
+        this.moTa = moTa;
+        this.SoLuongTon = SoLuongTon;
+        this.trangThai = trangThai;
+        this.createAt = createAt;
+        this.updateAt = updateAt;
+        this.deleted = deleted;
+    }
+
+
+
+    
 
     public int getId() {
         return id;
@@ -56,52 +77,68 @@ public class SanPhamChiTiet {
         this.id = id;
     }
 
-    public int getIdSanPham() {
-        return idSanPham;
+    public SanPham getSp() {
+        return sp;
     }
 
-    public void setIdSanPham(int idSanPham) {
-        this.idSanPham = idSanPham;
+    public void setSp(SanPham sp) {
+        this.sp = sp;
     }
 
-    public int getIdMauSac() {
-        return idMauSac;
+    public MauSac getMauSac() {
+        return mauSac;
     }
 
-    public void setIdMauSac(int idMauSac) {
-        this.idMauSac = idMauSac;
+    public void setMauSac(MauSac mauSac) {
+        this.mauSac = mauSac;
     }
 
-    public int getIdSize() {
-        return idSize;
+    public Size getSize() {
+        return size;
     }
 
-    public void setIdSize(int idSize) {
-        this.idSize = idSize;
+    public void setSize(Size size) {
+        this.size = size;
     }
 
-    public int getIdHang() {
-        return idHang;
+    public HangGiay getHang() {
+        return hang;
     }
 
-    public void setIdHang(int idHang) {
-        this.idHang = idHang;
+    public void setHang(HangGiay hang) {
+        this.hang = hang;
     }
 
-    public int getIdChatLieu() {
-        return idChatLieu;
+    public ChatLieu getChatLieu() {
+        return chatLieu;
     }
 
-    public void setIdChatLieu(int idChatLieu) {
-        this.idChatLieu = idChatLieu;
+    public void setChatLieu(ChatLieu chatLieu) {
+        this.chatLieu = chatLieu;
     }
 
-    public int getIdDeGiay() {
-        return idDeGiay;
+    public DeGiay getDeGiay() {
+        return deGiay;
     }
 
-    public void setIdDeGiay(int idDeGiay) {
-        this.idDeGiay = idDeGiay;
+    public void setDeGiay(DeGiay deGiay) {
+        this.deGiay = deGiay;
+    }
+
+    public String getMaCTSP() {
+        return maCTSP;
+    }
+
+    public void setMaCTSP(String maCTSP) {
+        this.maCTSP = maCTSP;
+    }
+
+    public int getGia() {
+        return gia;
+    }
+
+    public void setGia(int gia) {
+        this.gia = gia;
     }
 
     public String getMoTa() {
@@ -136,11 +173,11 @@ public class SanPhamChiTiet {
         this.createAt = createAt;
     }
 
-    public int getCreateBy() {
+    public String getCreateBy() {
         return createBy;
     }
 
-    public void setCreateBy(int createBy) {
+    public void setCreateBy(String createBy) {
         this.createBy = createBy;
     }
 
@@ -152,11 +189,11 @@ public class SanPhamChiTiet {
         this.updateAt = updateAt;
     }
 
-    public int getUpdateBy() {
+    public String getUpdateBy() {
         return updateBy;
     }
 
-    public void setUpdateBy(int updateBy) {
+    public void setUpdateBy(String updateBy) {
         this.updateBy = updateBy;
     }
 
@@ -170,7 +207,13 @@ public class SanPhamChiTiet {
 
     @Override
     public String toString() {
-        return "SanPhamChiTiet{" + "id=" + id + ", idSanPham=" + idSanPham + ", idMauSac=" + idMauSac + ", idSize=" + idSize + ", idHang=" + idHang + ", idChatLieu=" + idChatLieu + ", idDeGiay=" + idDeGiay + ", moTa=" + moTa + ", SoLuongTon=" + SoLuongTon + ", trangThai=" + trangThai + ", createAt=" + createAt + ", createBy=" + createBy + ", updateAt=" + updateAt + ", updateBy=" + updateBy + ", deleted=" + deleted + '}';
+        return "SanPhamChiTiet{" + "id=" + id + ", sp=" + sp + ", mauSac=" + mauSac + ", size=" + size + ", hang=" + hang + ", chatLieu=" + chatLieu + ", deGiay=" + deGiay + ", maCTSP=" + maCTSP + ", gia=" + gia + ", moTa=" + moTa + ", SoLuongTon=" + SoLuongTon + ", trangThai=" + trangThai + ", createAt=" + createAt + ", createBy=" + createBy + ", updateAt=" + updateAt + ", updateBy=" + updateBy + ", deleted=" + deleted + '}';
+    }
+
+    
+
+    public Object[] toDataRow(int index){
+        return new Object[]{isDeleted(),index,maCTSP,sp.getTen(),mauSac.getTenMau(),size.getSize(),chatLieu.getTenChatLieu(),hang.getTen(),deGiay.getTen(),gia,moTa,SoLuongTon,isDeleted()== false ?"Hoạt đông":"Không hoạt động"};
     }
     
 }

@@ -12,19 +12,21 @@ import java.util.Date;
  */
 public class SanPham {
     int id;
+    String maSP;
     String ten;
     String trangThai;
     Date createAt;
-    int createBy;
+    String createBy;
     Date updateAt;
-    int updateBy;
+    String updateBy;
     boolean deleted;
-
+    int soluong;
     public SanPham() {
     }
 
-    public SanPham(int id, String ten, String trangThai, Date createAt, int createBy, Date updateAt, int updateBy, boolean deleted) {
+    public SanPham(int id, String maSP, String ten, String trangThai, Date createAt, String createBy, Date updateAt, String updateBy, boolean deleted, int soluong) {
         this.id = id;
+        this.maSP = maSP;
         this.ten = ten;
         this.trangThai = trangThai;
         this.createAt = createAt;
@@ -32,6 +34,7 @@ public class SanPham {
         this.updateAt = updateAt;
         this.updateBy = updateBy;
         this.deleted = deleted;
+        this.soluong = soluong;
     }
 
     public int getId() {
@@ -40,6 +43,14 @@ public class SanPham {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getMaSP() {
+        return maSP;
+    }
+
+    public void setMaSP(String maSP) {
+        this.maSP = maSP;
     }
 
     public String getTen() {
@@ -66,11 +77,11 @@ public class SanPham {
         this.createAt = createAt;
     }
 
-    public int getCreateBy() {
+    public String getCreateBy() {
         return createBy;
     }
 
-    public void setCreateBy(int createBy) {
+    public void setCreateBy(String createBy) {
         this.createBy = createBy;
     }
 
@@ -82,11 +93,11 @@ public class SanPham {
         this.updateAt = updateAt;
     }
 
-    public int getUpdateBy() {
+    public String getUpdateBy() {
         return updateBy;
     }
 
-    public void setUpdateBy(int updateBy) {
+    public void setUpdateBy(String updateBy) {
         this.updateBy = updateBy;
     }
 
@@ -98,9 +109,26 @@ public class SanPham {
         this.deleted = deleted;
     }
 
+    public int getSoluong() {
+        return soluong;
+    }
+
+    public void setSoluong(int soluong) {
+        this.soluong = soluong;
+    }
+
     @Override
     public String toString() {
-        return "SanPham{" + "id=" + id + ", ten=" + ten + ", trangThai=" + trangThai + ", createAt=" + createAt + ", createBy=" + createBy + ", updateAt=" + updateAt + ", updateBy=" + updateBy + ", deleted=" + deleted + '}';
+        return ten;
+    }
+
+   
+    public Object[] toDataRow(int index){
+        return new Object[]{index,maSP,ten,soluong,soluong ==0 ? "Không hoạt động":"Hoạt động"};
+                
+    }
+    public int id(){
+        return id;
     }
     
 }

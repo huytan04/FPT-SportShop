@@ -16,6 +16,7 @@ public abstract class EduSysDAO<E,K> {
     abstract public void update(E entity);
     abstract public void delete(K key);
     abstract public ArrayList<E> selectAll();
-    abstract public E selectById(K key);
+    abstract public ArrayList<E> selectById(K key);
+
     abstract protected ArrayList<E> selectBySQL(String sql, Object ... args);
 }

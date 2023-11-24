@@ -40,7 +40,7 @@ public class AnhSPDao extends EduSysDAO<AnhSanPham, String>{
     }
 
     @Override
-    public AnhSanPham selectById(String key) {
+    public ArrayList<AnhSanPham> selectById(String key) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
@@ -48,5 +48,6 @@ public class AnhSPDao extends EduSysDAO<AnhSanPham, String>{
     protected ArrayList<AnhSanPham> selectBySQL(String sql, Object... args) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
-    
+
+  
 }

@@ -15,15 +15,15 @@ public class HangGiay {
     String ten;
     String trangThai;
     Date createAt;
-    int createBy;
+    String createBy;
     Date updateAt;
-    int updateBy;
+    String updateBy;
     boolean deleted;
 
     public HangGiay() {
     }
 
-    public HangGiay(int id, String ten, String trangThai, Date createAt, int createBy, Date updateAt, int updateBy, boolean deleted) {
+    public HangGiay(int id, String ten, String trangThai, Date createAt, String createBy, Date updateAt, String updateBy, boolean deleted) {
         this.id = id;
         this.ten = ten;
         this.trangThai = trangThai;
@@ -66,11 +66,11 @@ public class HangGiay {
         this.createAt = createAt;
     }
 
-    public int getCreateBy() {
+    public String getCreateBy() {
         return createBy;
     }
 
-    public void setCreateBy(int createBy) {
+    public void setCreateBy(String createBy) {
         this.createBy = createBy;
     }
 
@@ -82,11 +82,11 @@ public class HangGiay {
         this.updateAt = updateAt;
     }
 
-    public int getUpdateBy() {
+    public String getUpdateBy() {
         return updateBy;
     }
 
-    public void setUpdateBy(int updateBy) {
+    public void setUpdateBy(String updateBy) {
         this.updateBy = updateBy;
     }
 
@@ -100,7 +100,11 @@ public class HangGiay {
 
     @Override
     public String toString() {
-        return "HangGiay{" + "id=" + id + ", ten=" + ten + ", trangThai=" + trangThai + ", createAt=" + createAt + ", createBy=" + createBy + ", updateAt=" + updateAt + ", updateBy=" + updateBy + ", deleted=" + deleted + '}';
+        return ten;
     }
+public Object[] toDataRow(int index){
+        return new Object[]{index,id,ten};
+    }
+    
     
 }

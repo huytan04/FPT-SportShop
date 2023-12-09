@@ -65,8 +65,8 @@ import poly.edu.Model.DeGiay;
 import poly.edu.Model.EventPagination;
 import poly.edu.Model.PaginationItemRenderStyle1;
 import poly.edu.Model.TableAcTionEvent;
-import poly.edu.Model.entity.TableActionCellWatch;
-import poly.edu.Model.entity.TableXemSPCT;
+import poly.edu.Model.TableActionCellWatch;
+import poly.edu.Model.TableXemSPCT;
 import poly.edu.uitility.DBcontext;
 
 /**
@@ -2273,6 +2273,7 @@ public class SanPhamForm extends javax.swing.JPanel implements Runnable, ThreadF
     private void btnThemCTSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemCTSPActionPerformed
         // TODO add your handling code here:
         insertSPCT();
+        fillTable(listSP);
     }//GEN-LAST:event_btnThemCTSPActionPerformed
 
     private void btnCapNhatCTSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapNhatCTSPActionPerformed

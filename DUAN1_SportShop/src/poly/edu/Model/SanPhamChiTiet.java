@@ -215,5 +215,10 @@ public class SanPhamChiTiet {
     public Object[] toDataRow(int index){
         return new Object[]{isDeleted(),index,maCTSP,sp.getTen(),mauSac.getTenMau(),size.getSize(),chatLieu.getTenChatLieu(),hang.getTen(),deGiay.getTen(),gia,moTa,SoLuongTon,isDeleted()== false ?"Hoạt đông":"Không hoạt động"};
     }
-    
+    public Object[] toDataRowBanHang(int index){
+        return new Object[]{index,maCTSP,sp.getTen(),mauSac.getTenMau(),size.getSize(),chatLieu.getTenChatLieu(),hang.getTen(),deGiay.getTen(),gia,SoLuongTon};
+    }
+    public Object[] gioHang(int index){
+        return new Object[]{index,maCTSP,sp.getTen(),gia};
+    }
 }

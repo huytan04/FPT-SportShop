@@ -8,7 +8,7 @@ package poly.edu.Panels;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import poly.edu.Model.TableAcTionEvent;
-import poly.edu.Model.entity.TableXemSPCT;
+import poly.edu.Model.TableXemSPCT;
 
 /**
  *

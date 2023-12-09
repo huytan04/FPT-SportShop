@@ -50,7 +50,7 @@ public class Main extends javax.swing.JFrame {
         menu.addEventLogout(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openDangXuat();
+//                openDangXuat();
             }
         });
         menu.addEventMenu(new ActionListener() {
@@ -69,7 +69,7 @@ public class Main extends javax.swing.JFrame {
                     showForm(new BanHangForm());
                 } else if (index == 1) {
                     showForm(new TaiKhoanForm());
-                    
+
                 } else if (index == 2) {
                     showForm(new SanPhamForm());
                 } else if (index == 3) {
